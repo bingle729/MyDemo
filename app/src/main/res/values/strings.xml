@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MyDemo</string>
+    <string name="login_name_hint">Username (e.g. Email)</string>
+    <string name="login_password_hint">Password</string>
+    <string name="empty_username_warn">Please enter the username.</string>
+    <string name="empty_password_warn">Please enter the password.</string>
+    <string name="empty_code_warn">Please enter the confirmation code.</string>
+    <string name="login_forgot_pwd"><u>Forgot Password?</u></string>
+    <string name="login">Login</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes">Yes</string>
+    <string name="resetpwd_hint">As first login, you need to change password for %1$s. Please enter your newly selected password.</string>
+    <string name="forgotpwd_hint">You want to reset the password for:</string>
+    <string name="changepwd_hint">To reset the password for %1$s, a confirmation code has been sent to either your email or your cell phone.  Please enter the confirmation code and your new password.</string>
+    <string name="confirmation_code">Confirmation code</string>
+</resources>

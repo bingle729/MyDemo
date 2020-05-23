@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LoginActivity">
+
+    <ImageView
+        android:id="@+id/logoView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ergo_flex_logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/loginLayout"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loginLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="20dp"
+        >
+
+        <EditText
+            android:id="@+id/loginNameEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:maxLines="1"
+            android:inputType="text"
+            android:background="@drawable/bg_edittext"
+            android:hint="@string/login_name_hint"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:drawableRight="@mipmap/user"
+            />
+<!--   8A8A8A     -->
+        <com.huazun.mydemo.ui.views.TogglePasswordVisibilityEditText
+            android:id="@+id/loginPasswordEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginNameEdit"
+            android:background="@drawable/bg_edittext"
+            android:hint="@string/login_password_hint"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:inputType="textPassword"
+            />
+        <TextView
+            android:id="@+id/loginForgotPwdView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginPasswordEdit"
+
+            android:layout_marginTop="40dp"
+            android:text="@string/login_forgot_pwd"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginLoginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/loginForgotPwdView"
+            app:layout_constraintTop_toBottomOf="@+id/loginPasswordEdit"
+            app:layout_constraintBaseline_toBaselineOf="@+id/loginForgotPwdView"
+            android:text="@string/login"
+            android:textAppearance="?android:attr/textAppearance"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="0dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            style="@style/ButtonAppTheme"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/loginVersionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
