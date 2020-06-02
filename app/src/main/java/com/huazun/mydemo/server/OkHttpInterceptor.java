@@ -144,7 +144,6 @@ public class OkHttpInterceptor implements Interceptor {
             Buffer buffer = new Buffer();
             request.body().writeTo(buffer);
             String body = buffer.readUtf8();
-
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
             JsonParser parser = new JsonParser();
             JsonElement element = parser.parse(body);

@@ -27,6 +27,7 @@ public class UserAPI {
 
         @POST(CHANGE_PASSWORD)
         Call<UserLoginResponse> changePassword(@Body UserChangePasswordRequest requestBody);
+
     }
 
     private static UserService userService() {

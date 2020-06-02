@@ -9,7 +9,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.button.MaterialButton;
-import com.huazun.mydemo.Globals;
 import com.huazun.mydemo.R;
 import com.huazun.mydemo.server.user.UserAPI;
 import com.huazun.mydemo.server.user.UserLoginResponse;
@@ -97,7 +96,7 @@ public class ResetPasswordActivity extends AppCompatActivity implements View.OnC
     }
 
     private void resetSuccess(){
-        setResult(Globals.RESULT_OK);
+        setResult(RESULT_OK);
         finish();
     }
 

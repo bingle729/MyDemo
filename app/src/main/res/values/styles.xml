@@ -13,10 +13,12 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="ButtonAppTheme" parent="android:Widget.Material.Button">
+    <style name="MaterialButtonAppTheme" parent="android:Widget.Material.Button">
         <item name="android:background">@drawable/material_button</item>
+        <item name="android:textAppearance">?android:attr/textAppearance</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:backgroundTint">@color/colorPrimaryDark</item>
     </style>
-
     <style name="alertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
         <!-- Used for the buttons -->
         <item name="colorAccent">@color/colorAccent</item>

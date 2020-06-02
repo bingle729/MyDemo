@@ -72,8 +72,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void login(){
         String name = nameEdit.getText().toString();
         String password = passwordEdit.getText().toString();
-        if(!verify(name, password))
-            return;
+//        if(!verify(name, password))
+//            return;
         UserAPI.userLogin(name, password, new Callback<UserLoginResponse>() {
             @Override
             public void onResponse(Call<UserLoginResponse> call, Response<UserLoginResponse> response) {
@@ -82,6 +82,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     if (userLoginResponse.isResponseOK()){
                         User user = userLoginResponse.getUserInfo();
                         Toast.makeText(LoginActivity.this, "userName = "+ user.getUserName() + ", email = " + user.getEmail(), Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(LoginActivity.this, UploadFilesActivity.class);
+                        startActivity(intent);
                     } else if (userLoginResponse.isFirstLogin()){
                         User user = userLoginResponse.getUserInfo();
                         //to New Password Activity
@@ -128,7 +130,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == Globals.REQUEST_CODE) {
-            if (resultCode == Globals.RESULT_OK) {
+            if (resultCode == RESULT_OK) {
                 Intent intent = new Intent(LoginActivity.this, SplashActivity.class);
                 startActivity(intent);
                 finish();

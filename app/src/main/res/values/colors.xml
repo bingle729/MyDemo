@@ -9,4 +9,7 @@
     <color name="colorAccent">#46BDBF</color>
 
     <color name="colorGrey">#8A8A8A</color>
+
+    <color name="itemViewColor1">#bccdff</color>
+    <color name="itemViewColor2">#E5E5E5</color>
 </resources>

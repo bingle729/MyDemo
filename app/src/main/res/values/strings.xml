@@ -13,4 +13,11 @@
     <string name="forgotpwd_hint">You want to reset the password for:</string>
     <string name="changepwd_hint">To reset the password for %1$s, a confirmation code has been sent to either your email or your cell phone.  Please enter the confirmation code and your new password.</string>
     <string name="confirmation_code">Confirmation code</string>
+    <string name="come_from_disk">Come From Disk</string>
+    <string name="come_from_bt">Come From BT</string>
+    <string name="upload">Upload</string>
+    <string name="parent_folder">Parent Folder</string>
+    <string name="server_url">Server URL: </string>
+    <string name="input_server_url">Input server url</string>
+    <string name="file_explorer">File Explorer</string>
 </resources>
